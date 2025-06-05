@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Silver Rocket</title>
+	<link rel="stylesheet" href="./asset/css/style.css"/>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="./asset/javascript/appsilver.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="body body--page"> 
+     <header>
+      <img src="./asset/image/logoia.png" alt="Logo du site internet de deltarocket" class="header-img" />
+    
+    <div class="bubble" id="chat-bubble">Bienvenue ! Et bonne expérience de jeux</div>
+    
+    <video autoplay muted loop class="header-video">
+      <source src="./asset/video/Test_IA_SITE_.mp4" type="video/mp4" />
+    </video>
+  </header>
+  <div id="portraitWarning" class="portrait-warning"> <div class="rotate-icon-container">
+      <svg class="rotate-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="64px" height="64px"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    </div>
+    <p>Pour une meilleure expérience, veuillez tourner votre appareil en mode paysage.</p>
+</div>
+
+  <div id="welcomePopup" class="popup-overlay">
+        <div class="popup-content">
+            <span id="closePopup" class="popup-close">&times;</span>
+            <h2 class="popuptxt">Bonjour astronaute,</h2>
+            <video autoplay muted loop class="header-video">
+            <source src="./asset/video/Test_IA_SITE_.mp4" type="video/mp4" />
+            </video>
+            <p class="popuptxt">Je suis OZIA, votre Opérateur Zénithal d’Intelligence Absurde.<br> Votre fusée est endommagée suite à l'entrée dans l’atmosphère terrestre.<br> Veuillez la réparer sinon vous allez vous noyer dans la fumée.</p>
+            <div id="btnstart">
+            <button class="btnpopup" id="btn1">Démarrer</button>
+            </div>
+        </div>
+    </div>
+
+<div id="simonPopup">
+  <div class="simon-game">
+    <div class="pad top-left" data-color="red"></div>
+    <div class="pad top-right" data-color="green"></div>
+    <div class="pad bottom-left" data-color="blue"></div>
+    <div class="pad bottom-right" data-color="yellow"></div>
+    <div class="center-button" id="startSimon">Redémarrer</div>
+  </div>
+</div>
+
+  <div id="popupDigipad" class="popup-digipad">
+    <div class="digipad-content">
+        <h2>Entrer le code</h2>
+        <input type="password" id="inputCode" class="input-code" readonly>
+        <div class="digipad-buttons">
+            <button class="num-btn">1</button>
+            <button class="num-btn">2</button>
+            <button class="num-btn">3</button>
+            <button class="num-btn">4</button>
+            <button class="num-btn">5</button>
+            <button class="num-btn">6</button>
+            <button class="num-btn">7</button>
+            <button class="num-btn">8</button>
+            <button class="num-btn">9</button>
+            <button id="btnClear" class="action-btn">C</button>
+            <button class="num-btn">0</button>
+            <button id="btnValidate" class="action-btn">OK</button>
+        </div>
+        <p id="errorMsg" class="error-msg"></p>
+    </div>
+</div>
+
+
+  <main class="mainclass" id="carousel-container">
+    
+        <section id="section1" class="sectioncontainer">
+          
+          <div class="section-content"> 
+          <button type="button" id="backgroundChangeButton" class="interactive-icon-btn"> 
+            <img src="./asset/image/pile-08.png" alt="Icône de pile pour changer le fond" class="button-icon">
+          </button>
+</div>
+
+    <button class="nav-button right" id="btn3" data-target="section2">Salle suivante</button>
+    </section>
+
+        <section id="section2" class="sectioncontainer">
+          <div class="section-content s2-content"> 
+            <button type="button" id="componentButtonS2" class="interactive-icon-btn2"> 
+              <img src="./asset/image/raccordement.png" alt="Icône pour activer la section 2" class="button-icon3">
+            </button>
+          </div>
+        
+
+        <button class="nav-button left" id="btnback" data-target="section1">Salle précédente</button>
+        <Div id="btn4">
+        <button class="nav-button right" id="btnGoToS3" data-target="section3">Salle suivante</button>
+        </Div>
+      </section>
+
+      <section id="section3" class="sectioncontainer">
+        <div class="s3-interactive-area">
+    <button type="button" id="btnShowDigipad" class="interactive-icon-btn3"> 
+      <img src="./asset/image/ventilation1.png" alt="Ouvrir le terminal de code" class="button-icon2 digipad-icon-original">
+      <img src="./asset/image/ventilation2.png" alt="Terminal de code activé" class="button-icon2 digipad-icon-clique">
+    </button>
+</div>
+
+        <button class="nav-button left" data-target="section2">Salle précédente</button>
+        <button class="nav-button right" data-target="section4" id="btnGoToS4">Salle suivante</button>
+    </section>
+
+
+        <section id="section4" class="sectioncontainer">
+            <div class="center-container">             
+                 <button class="round-button" id="landButton">
+                <img src="./asset/image/logodelta.png" alt="Icône de fusée" class="button-icon3">
+              </button>
+            </div>
+          <button class="nav-button left" id="btnback1" data-target="section3">Salle précédente</button>
+        </section>
+    </main> 
+    <footer>
+        <div class="footer-background"></div>
+        <div class="footer-main-title-container">
+            <h2>Journal de Bord de Delta Rocket</h2>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section entry-1">
+                <h3>Jour 12.</h3>
+                <p>Enfin, me voila dans ma Rocket. Celle-ci me fait me sentir en apesanteur, malgré la fausse gravité intérieure. J'ai l'impression de bouger si vite, de traverser la galaxie en un instant et d'être aussi libre que le vent. J'ai eu une si bonne idée de suivre mes instincts, de m'inspirer de la maison culturelle de Namur pour la créer. Elle est aussi robuste et dynamique que le bâtiment, dont l'esthétique me fait beaucoup penser à l'Expo '58. Oh, c'était un événement qui, comme moi, accordait de l'importance aux engins spatiaux. Enfin bon, je ne vais pas m'étaler, mais ma chère Silver Rocket est indispensable à mon voyage.</p>
+            </div>
+            <div class="footer-section entry-2">
+                <h3>Jour 17.</h3>
+                <p>Aujourd'hui, je suis sorti faire un tour dehors afin d'observer la Terre, mais surtout d'admirer ma Silver Rocket. Ce n'est pas ma première œuvre, cela ne sera pas ma dernière non plus, et comme pour les autres j'y retrouve ma fascination pour les sciences. Je me suis notamment fort inspiré du X-43A Scramjet, une fusée de la Nasa, pour donner forme à ma propre Rocket. Son bel inox poli reflète les rayons du soleil et me réchauffe même lorsque je flotte au travers de l'espace infini.</p>
+            </div>
+            <div class="footer-image-center-container">
+                <img src="./asset/image/blueprint.jpg" alt="Illustration de la Silver Rocket" class="footer-image">
+            </div>
+
+            <div class="footer-section entry-3">
+                <h3>Jour 23.</h3>
+                <p>Je me suis rendu compte que, sous certains angles, ma fusée disparaissait! Je l'ai remarqué en utilisant les caméras de maintenance extérieures. C'est certainement dû à cet effet miroir que je lui ai donné grâce à son inox poli. Les miroirs lui donnent des volumes francs et purs, mais aussi des effets de lumière qui varient si cette dernière est artificielle ou naturelle. Elle me fascine de plus en plus et j'en apprend de jour en jour! Comme quoi, vivre et voyager avec me permet de la découvrir sous toutes ses facettes.</p>
+            </div>
+            <div class="footer-section entry-4">
+                <h3>Jour 25.</h3>
+                <p>Une pièce m'a lâché plus tôt dans la journée, ou était-ce la nuit? Peu importe! Ce qui compte réellement c'est que j'ai réussi à la réparer. Comme j'ai construit la Silver Rocket avec des matériaux industriels qui s'accordent avec ma vision high-tech des choses, alors trouver de quoi la changer n'a pas été très compliqué. J'ai tout de même eu de la chance d'avoir récupéré un ancien conduit de cheminée juste avant d'embarquer, mais surtout que ce soit ça qui m'ait lâché. Il aurait été trop compliqué de remplacer une pièce faite sur mesure pour l'un de couloirs. Plus de peur que de mal.</p>
+            </div>
+            <div class="footer-section entry-5">
+                <h3>Jour 30.</h3>
+                <p>Le voyage touche bientôt à sa fin. Mon esprit de découverte m'a emmené plus loin que ce que j'espérais et j'ai vu plus de choses que je n'aurais pu l'imaginer. Il est temps que ma fusée se repose, qu'elle trouve sa place sur Terre. Qui sait, peut-être vais-je un jour lui créer une petite sœur en gardant un design lisse et brillant. Ou bien peut-être vais-je imaginer autre chose au détour d'une rue, en regardant la télévision ou en observant des sportifs dans leur milieu. Seul l'avenir me le dira, mais pour le moment, direction le Delta.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

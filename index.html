@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu</title>
+	<link rel="stylesheet" href="./asset/css/style.css"/>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="./asset/javascript/app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body class="body--index">
+
+    <section id="popupstart" class="sectionstart">
+        <div class="content-overlay">
+            <button id="startButton" class="start-button" >
+                <img src="./asset/image/SiteWebVisuFini-07.png" alt="Start Button" class="start-button-image">
+            </button>
+    </div>
+    </section>
+
+    <section id="video-section" class="section bg-black">
+        <video id="video-player" playsinline preload="metadata">
+            <source src="./asset/video/Videointro.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+    </section>
+
+    <section id="final-section" class="sectionstartfinal">
+        <div class="content-wrapper"> 
+            <div class="conteneur-principal">
+                <div class="colonne-video">
+                    <video id="video-player-final" autoplay muted loop playsinline class="video-anime">
+                        <source src="./asset/video/Test_IA_SITE_.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                <div class="colonne-texte">
+                    <p class="texte-anime">
+                        Vous allez embarquer pour une expérience interactive sur Silver Rocket, une œuvre de Frédérick Platéus. Êtes-vous prêt, capitaine ?
+                    </p>
+                </div>
+            </div>
+            <div class="conteneur-bouton">
+                <a href="./silverrocket.html" class="bouton-lien">Allons-y !</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="portraitWarning" class="portrait-warning" style="display: none;"> <div class="rotate-icon-container">
+        <svg class="rotate-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="64px" height="64px"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    </div>
+    <p>Pour une meilleure expérience, veuillez tourner votre appareil en mode paysage.</p>
+    </div>
+
+    
+</body>
+</html>
